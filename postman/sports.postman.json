@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "a9eee4bf-ea72-45e9-affc-b7e62a1dd7a1",
+		"name": "Sports",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7727936"
+	},
+	"item": [
+		{
+			"name": "Add Player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"firstName\": \"Cristiano\",\n        \"lastName\": \"Ronaldo\",\n        \"position\": \"Striker\",\n        \"team\": \"Al-Nasrr\",\n        \"jerseyNumber\":7\n    }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/player/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"player",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete One Player",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"firstName\": \"Cristiano\",\n        \"lastName\": \"Ronaldo\",\n        \"position\": \"Striker\",\n        \"team\": \"Al-Nasrr\",\n        \"jerseyNumber\":7\n    }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/player/delete/:index",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"player",
+						"delete",
+						":index"
+					],
+					"variable": [
+						{
+							"key": "index",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Player",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"ROBERTO\",\n    \"lastName\": \"Clemente\",\n    \"position\": \"Striker\",\n    \"team\": \"Al-Nasrr\",\n    \"jerseyNumber\": 7\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/player/update/?index=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"player",
+						"update",
+						""
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Players",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"firstName\": \"Cristiano\",\n        \"lastName\": \"Ronaldo\",\n        \"position\": \"Striker\",\n        \"team\": \"Al-Nasrr\",\n        \"jerseyNumber\":7\n    }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/player/view-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"player",
+						"view-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
